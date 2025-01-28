@@ -12,6 +12,5 @@ namespace WebShopApp.Core.Contracts
         int CountClients();
         int CountOrders();
         decimal SumOrders();
-
     }
 }

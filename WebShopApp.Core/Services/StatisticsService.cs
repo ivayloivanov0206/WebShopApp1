@@ -19,7 +19,6 @@ namespace WebShopApp.Core.Services
         public int CountClients()
         {
             return _context.Users.Count();
-
         }
         public int CountProducts()
         {
@@ -31,13 +30,8 @@ namespace WebShopApp.Core.Services
         }
         public decimal SumOrders()
         {
-           var suma = _context.Orders.Sum(x=> x.TotalPrice);
-
-            return suma;
+           var suma = _context.Orders.Sum(x => x.Price*x.Quantity-x.Price*x.Quantity*x.Discount/100);
+           return suma;
         }
-
-
-
-
     }
 }

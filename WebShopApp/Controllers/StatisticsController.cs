@@ -21,6 +21,7 @@ namespace WebShopApp.Controllers
             statistics.CountProducts = _statisticsService.CountProducts();
             statistics.CountOrders = _statisticsService.CountOrders();
             statistics.SumOrders = _statisticsService.SumOrders();
+
             return View(statistics);
         }
 
